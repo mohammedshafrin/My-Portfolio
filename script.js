@@ -78,7 +78,7 @@ function updateActiveNav() {
 
 // ── Typed text effect ──
 const roles = [
-  'Full Stack Developer',
+  'Junior Full Stack Developer',
   'Cyber Security Enthusiast',
 ];
 
