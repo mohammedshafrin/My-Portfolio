@@ -2,7 +2,7 @@
 
 A modern, sleek, and fully responsive personal portfolio website built to showcase my web development skills, cybersecurity knowledge, and creative digital projects. 
 
-![Portfolio Preview](./Profile%20Image/My%20image.jpg) **🔗 [Live Demo](https://your-live-website-link.com)**
+![Portfolio Preview](./Profile%20Image/My%20image.jpg) **🔗 [Live Demo](https://mohammedshafrin.github.io/My-Portfolio/)**
 
 ## ✨ Features
 
@@ -23,9 +23,11 @@ A modern, sleek, and fully responsive personal portfolio website built to showca
 
 ## 👨‍💻 About Me
 
-I am a Junior Full Stack Developer and CyberSecurity Enthusiast based in Kandy, Sri Lanka. I specialize in building clean, responsive web applications using HTML, CSS, JavaScript, PHP, and Python. I hold a CEH v11 certification and have trained at MARS TECH International.
+Hi, I’m Mohammed Shafrin, a Junior Full Stack Developer passionate about building responsive and user-friendly web applications. I have experience in both front-end and back-end development, with skills in HTML, CSS, JavaScript, PHP, Python, C Programming, and MySQL.
 
-Beyond writing code and securing networks, I am deeply interested in AI-driven creativity. I actively explore prompt engineering to generate high-quality AI imagery and maintain a portfolio of digital assets on platforms like Adobe Stock and Dreamstime. I am fluent in both English and Tamil.
+I completed my studies at Iqra National School in 2021 and earned professional certificates from HP LIFE and University of Moratuwa.
+
+I enjoy learning new technologies, solving real-world problems, and developing modern web solutions. My goal is to grow as a software developer while contributing to innovative and impactful projects.
 
 ## 🚀 Getting Started
 
