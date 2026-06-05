@@ -316,7 +316,7 @@ body:has(button:hover) .cursor {
 
 .hero-title {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 5vw, 4.5rem);
+  font-size: clamp(2.5rem, 6vw, 5rem);
   font-weight: 700;
   line-height: 1.0;
   letter-spacing: -2px;
