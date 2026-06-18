@@ -141,30 +141,215 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 revealEls.forEach(el => revealObserver.observe(el));
 
-// ── Certifications Filter ──
-const certFilters = document.querySelectorAll('.cert-filter');
-const certCards = document.querySelectorAll('.cert-card');
+// ── Projects "More Works" button ──
+const projectsMoreBtn = document.getElementById('projectsMoreBtn');
+const hiddenProjects = document.querySelectorAll('.hidden-project');
+let projectsExpanded = false;
 
-certFilters.forEach(btn => {
-  btn.addEventListener('click', () => {
-    // Update active button
-    certFilters.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
+if (projectsMoreBtn) {
+  // Hide the btn if there are no extra projects
+  if (hiddenProjects.length === 0) {
+    projectsMoreBtn.closest('.projects-more-wrap').style.display = 'none';
+  }
 
-    const filter = btn.getAttribute('data-filter');
+  projectsMoreBtn.addEventListener('click', () => {
+    projectsExpanded = !projectsExpanded;
+    projectsMoreBtn.classList.toggle('expanded', projectsExpanded);
+    const btnText = projectsMoreBtn.querySelector('span');
+    btnText.textContent = projectsExpanded ? 'Show Less' : 'More Works';
 
-    certCards.forEach(card => {
-      if (filter === 'all' || card.getAttribute('data-category') === filter) {
-        card.classList.remove('hidden');
-        // Re-trigger reveal animation
-        card.classList.remove('visible');
-        setTimeout(() => card.classList.add('visible'), 50);
+    hiddenProjects.forEach((card, i) => {
+      if (projectsExpanded) {
+        card.classList.remove('hidden-project');
+        card.style.display = 'flex';
+        card.style.flexDirection = 'column';
+        // Stagger the animation
+        setTimeout(() => {
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+          card.classList.add('visible');
+        }, i * 100 + 50);
       } else {
-        card.classList.add('hidden');
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.classList.remove('visible');
+        setTimeout(() => {
+          card.style.display = 'none';
+          card.classList.add('hidden-project');
+        }, 400);
       }
     });
   });
-});
+}
+
+// ── Certifications Carousel ──
+(function initCertCarousel() {
+  const track = document.getElementById('certTrack');
+  const prevBtn = document.getElementById('certPrev');
+  const nextBtn = document.getElementById('certNext');
+  const dotsContainer = document.getElementById('certDots');
+  if (!track) return;
+
+  let currentFilter = 'all';
+  let currentIndex = 0;
+
+  function getVisibleCards() {
+    return Array.from(track.querySelectorAll('.cert-card:not(.hidden)'));
+  }
+
+  function getCardsPerView() {
+    const vw = window.innerWidth;
+    if (vw <= 768) return 1;
+    if (vw <= 1024) return 2;
+    return 3;
+  }
+
+  function getTotalPages(cards) {
+    return Math.max(1, Math.ceil(cards.length / getCardsPerView()));
+  }
+
+  function updateDots(total, index) {
+    dotsContainer.innerHTML = '';
+    for (let i = 0; i < total; i++) {
+      const dot = document.createElement('button');
+      dot.className = 'cert-dot' + (i === index ? ' active' : '');
+      dot.setAttribute('aria-label', 'Go to page ' + (i + 1));
+      dot.addEventListener('click', () => goToPage(i));
+      dotsContainer.appendChild(dot);
+    }
+  }
+
+  function goToPage(page) {
+    const cards = getVisibleCards();
+    const perView = getCardsPerView();
+    const total = getTotalPages(cards);
+    currentIndex = Math.max(0, Math.min(page, total - 1));
+
+    // Calculate card width + gap
+    if (cards.length === 0) return;
+    const cardW = cards[0].offsetWidth;
+    const gap = 24;
+    const offset = currentIndex * perView * (cardW + gap);
+    track.style.transform = `translateX(-${offset}px)`;
+
+    prevBtn.disabled = currentIndex === 0;
+    nextBtn.disabled = currentIndex >= total - 1;
+    updateDots(total, currentIndex);
+  }
+
+  function rebuild() {
+    currentIndex = 0;
+    const cards = getVisibleCards();
+    const perView = getCardsPerView();
+
+    // Set card widths via inline style to handle dynamic filter changes
+    cards.forEach(card => {
+      if (perView === 1) {
+        card.style.flex = '0 0 100%';
+      } else if (perView === 2) {
+        card.style.flex = '0 0 calc((100% - 24px) / 2)';
+      } else {
+        card.style.flex = '0 0 calc((100% - 48px) / 3)';
+      }
+    });
+
+    goToPage(0);
+  }
+
+  prevBtn.addEventListener('click', () => goToPage(currentIndex - 1));
+  nextBtn.addEventListener('click', () => goToPage(currentIndex + 1));
+  window.addEventListener('resize', rebuild);
+
+  // ── Certifications Filter (works with carousel) ──
+  const certFilters = document.querySelectorAll('.cert-filter');
+  certFilters.forEach(btn => {
+    btn.addEventListener('click', () => {
+      certFilters.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentFilter = btn.getAttribute('data-filter');
+
+      track.querySelectorAll('.cert-card').forEach(card => {
+        if (currentFilter === 'all' || card.getAttribute('data-category') === currentFilter) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      rebuild();
+    });
+  });
+
+  // Init
+  setTimeout(rebuild, 50); // let layout settle
+})();
+
+// ── Games Carousel ──
+(function initGamesCarousel() {
+  const track = document.getElementById('gamesTrack');
+  const prevBtn = document.getElementById('gamesPrev');
+  const nextBtn = document.getElementById('gamesNext');
+  const dotsContainer = document.getElementById('gamesDots');
+  if (!track) return;
+
+  let currentIndex = 0;
+
+  function getAllCards() {
+    return Array.from(track.querySelectorAll('.game-card'));
+  }
+
+  function getCardsPerView() {
+    return window.innerWidth <= 768 ? 1 : 2;
+  }
+
+  function getTotalPages(cards) {
+    return Math.max(1, Math.ceil(cards.length / getCardsPerView()));
+  }
+
+  function updateDots(total, index) {
+    dotsContainer.innerHTML = '';
+    for (let i = 0; i < total; i++) {
+      const dot = document.createElement('button');
+      dot.className = 'games-dot' + (i === index ? ' active' : '');
+      dot.setAttribute('aria-label', 'Go to page ' + (i + 1));
+      dot.addEventListener('click', () => goToPage(i));
+      dotsContainer.appendChild(dot);
+    }
+  }
+
+  function goToPage(page) {
+    const cards = getAllCards();
+    const perView = getCardsPerView();
+    const total = getTotalPages(cards);
+    currentIndex = Math.max(0, Math.min(page, total - 1));
+
+    if (cards.length === 0) return;
+    const cardW = cards[0].offsetWidth;
+    const gap = 24;
+    const offset = currentIndex * perView * (cardW + gap);
+    track.style.transform = `translateX(-${offset}px)`;
+
+    prevBtn.disabled = currentIndex === 0;
+    nextBtn.disabled = currentIndex >= total - 1;
+    updateDots(total, currentIndex);
+  }
+
+  function rebuild() {
+    currentIndex = 0;
+    const cards = getAllCards();
+    const perView = getCardsPerView();
+    cards.forEach(card => {
+      card.style.flex = perView === 1 ? '0 0 100%' : '0 0 calc((100% - 24px) / 2)';
+    });
+    goToPage(0);
+  }
+
+  prevBtn.addEventListener('click', () => goToPage(currentIndex - 1));
+  nextBtn.addEventListener('click', () => goToPage(currentIndex + 1));
+  window.addEventListener('resize', rebuild);
+
+  setTimeout(rebuild, 50);
+})();
 
 // ── Contact form ──
 const form = document.getElementById('contactForm');
