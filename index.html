@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mohammed Shafrin | Junior Full Stack Developer</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="./style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -16,14 +16,15 @@
 
 <body>
 
-  <!-- Noise overlay -->
   <div class="noise"></div>
 
-  <!-- Cursor -->
   <div class="cursor" id="cursor"></div>
   <div class="cursor-dot" id="cursorDot"></div>
 
-  <!-- ===== NAVBAR ===== -->
+  <!-- ===========================
+   NAVBAR
+  =========================== -->
+
   <nav class="navbar" id="navbar">
     <div class="nav-logo"><span class="accent">MS.</span></div>
     <ul class="nav-links" id="navLinks">
@@ -33,6 +34,7 @@
       <li><a href="#services" class="nav-link">Services</a></li>
       <li><a href="#projects" class="nav-link">Projects</a></li>
       <li><a href="#certifications" class="nav-link">Certifications</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
       <li><a href="#games" class="nav-link">Games</a></li>
       <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
@@ -41,7 +43,6 @@
     </button>
   </nav>
 
-  <!-- ===== HERO ===== -->
   <section class="hero" id="home">
     <div class="hero-bg-grid"></div>
     <div class="hero-glow"></div>
@@ -62,7 +63,6 @@
         <span class="typed-text" id="typedText"></span>
         <span class="cursor-blink">|</span>
         <span class="role-prefix">—&nbsp;</span>
-
       </div>
 
       <p class="hero-desc reveal">
@@ -84,7 +84,7 @@
             class="fab fa-linkedin-in"></i></a>
         <a href="https://github.com/mohammedshafrin" target="_blank" aria-label="GitHub"><i
             class="fab fa-github"></i></a>
-        <a href="mohammedshafrin.it@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <a href="mailto:mohammedshafrin.it@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
       </div>
     </div>
 
@@ -121,7 +121,10 @@
     </div>
   </section>
 
-  <!-- ===== ABOUT ===== -->
+  <!-- ===========================
+   ABOUT
+  =========================== -->
+
   <section class="about section" id="about">
     <div class="container">
       <div class="section-label reveal">01 / About</div>
@@ -180,88 +183,113 @@
     </div>
   </section>
 
-  <!-- ===== SKILLS ===== -->
+  <!-- ===========================
+   SKILLS
+  =========================== -->
+
   <section class="skills section" id="skills">
     <div class="container">
       <div class="section-label reveal">02 / Skills</div>
       <h2 class="section-title reveal">What I <em>know</em></h2>
 
-      <div class="skills-grid">
+      <div class="skills-grid" id="skillsGrid">
 
         <div class="skill-group reveal">
-          <div class="skill-group-header">
-            <i class="fas fa-code"></i> Frontend
-          </div>
+          <div class="skill-group-header"><i class="fas fa-code"></i> Frontend</div>
           <div class="skill-tags">
-            <span class="tag">HTML5</span>
-            <span class="tag">CSS3</span>
-            <span class="tag">JavaScript</span>
-            <span class="tag">WordPress</span>
+            <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span><span
+              class="tag">WordPress</span>
           </div>
         </div>
 
         <div class="skill-group reveal">
-          <div class="skill-group-header">
-            <i class="fas fa-server"></i> Backend
-          </div>
+          <div class="skill-group-header"><i class="fas fa-server"></i> Backend</div>
           <div class="skill-tags">
-            <span class="tag">PHP</span>
-            <span class="tag">MySQL</span>
-            <span class="tag">Python</span>
-            <span class="tag">C Programming</span>
+            <span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">Python</span><span class="tag">C
+              Programming</span>
           </div>
         </div>
 
         <div class="skill-group reveal">
-          <div class="skill-group-header">
-            <i class="fas fa-shield-halved"></i> CyberSecurity
-          </div>
+          <div class="skill-group-header"><i class="fas fa-shield-halved"></i> CyberSecurity</div>
           <div class="skill-tags">
-            <span class="tag">Ethical Hacking</span>
-            <span class="tag">Network Security</span>
-            <span class="tag">Cyber Threats</span>
-            <span class="tag">Security Auditing</span>
+            <span class="tag">Ethical Hacking</span><span class="tag">Network Security</span><span class="tag">Cyber
+              Threats</span><span class="tag">Security Auditing</span>
           </div>
         </div>
 
         <div class="skill-group reveal">
-          <div class="skill-group-header">
-            <i class="fas fa-wrench"></i> Tools
-          </div>
+          <div class="skill-group-header"><i class="fas fa-wrench"></i> Tools</div>
           <div class="skill-tags">
-            <span class="tag">Git & GitHub</span>
-            <span class="tag">VS Code</span>
-            <span class="tag">Linux</span>
-            <span class="tag">Chrome DevTools</span>
+            <span class="tag">Git & GitHub</span><span class="tag">VS Code</span><span class="tag">Linux</span><span
+              class="tag">Chrome DevTools</span>
+          </div>
+        </div>
+        <!--
+        <div class="skill-group hidden-skill reveal">
+          <div class="skill-group-header"><i class="fas fa-database"></i> Database Management</div>
+          <div class="skill-tags">
+            <span class="tag">MySQL</span><span class="tag">PostgreSQL</span><span class="tag">MongoDB</span><span class="tag">Redis</span>
           </div>
         </div>
 
-        <!-- ═══ ADD MORE SKILL GROUPS HERE — copy the block below.
-             New groups auto-fit into the grid with the same card design.
-
-        <div class="skill-group reveal">
-          <div class="skill-group-header">
-            <i class="fas fa-icon-name"></i> Category Name
-          </div>
+        <div class="skill-group hidden-skill reveal">
+          <div class="skill-group-header"><i class="fas fa-cloud"></i> Cloud Technologies</div>
           <div class="skill-tags">
-            <span class="tag">Skill 1</span>
-            <span class="tag">Skill 2</span>
+            <span class="tag">AWS</span><span class="tag">Azure</span><span class="tag">Docker</span><span class="tag">Firebase</span>
           </div>
         </div>
-        ═══ -->
+
+        <div class="skill-group hidden-skill reveal">
+          <div class="skill-group-header"><i class="fas fa-sitemap"></i> API Development</div>
+          <div class="skill-tags">
+            <span class="tag">RESTful APIs</span><span class="tag">GraphQL</span><span class="tag">Postman</span><span class="tag">JSON</span>
+          </div>
+        </div>
+
+        <div class="skill-group hidden-skill reveal">
+          <div class="skill-group-header"><i class="fas fa-paint-brush"></i> UI/UX Design</div>
+          <div class="skill-tags">
+            <span class="tag">Figma</span><span class="tag">Wireframing</span><span class="tag">Prototyping</span><span class="tag">Adobe XD</span>
+          </div>
+        </div>
+
+        <div class="skill-group hidden-skill reveal">
+          <div class="skill-group-header"><i class="fas fa-mobile-alt"></i> Mobile App Dev</div>
+          <div class="skill-tags">
+            <span class="tag">React Native</span><span class="tag">Flutter</span><span class="tag">Responsive Design</span>
+          </div>
+        </div>
+
+        <div class="skill-group hidden-skill reveal">
+          <div class="skill-group-header"><i class="fas fa-cogs"></i> DevOps & CI/CD</div>
+          <div class="skill-tags">
+            <span class="tag">Jenkins</span><span class="tag">GitHub Actions</span><span class="tag">CI/CD Pipelines</span>
+          </div>
+        </div>
 
       </div>
-    </div>
+
+      <div class="skills-more-wrap reveal">
+        <button class="btn btn-outline center-btn" id="skillsMoreBtn">
+          <i class="fas fa-layer-group"></i>
+          <span>More Skills</span>
+        </button>
+      </div>
+      -->
+      </div>
   </section>
 
-  <!-- ===== SERVICES ===== -->
+  <!-- ===========================
+   SERVICES
+  =========================== -->
+
   <section class="services section" id="services">
     <div class="container">
       <div class="section-label reveal">03 / Services</div>
       <h2 class="section-title reveal">What I can <em>do for you</em></h2>
 
       <div class="services-grid">
-
         <div class="service-card reveal">
           <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
           <h3>Web Development</h3>
@@ -277,24 +305,14 @@
           <a href="#contact" class="service-cta">Get Started <i class="fas fa-arrow-right"></i></a>
           <div class="card-num">02</div>
         </div>
-
-        <!-- ═══ ADD MORE SERVICE CARDS HERE — copy the block below.
-             New cards auto-fit into the grid with the same card design.
-
-        <div class="service-card reveal">
-          <div class="service-icon"><i class="fas fa-icon-name"></i></div>
-          <h3>Service Name</h3>
-          <p>Service description goes here.</p>
-          <a href="#contact" class="service-cta">Get Started <i class="fas fa-arrow-right"></i></a>
-          <div class="card-num">03</div>
-        </div>
-        ═══ -->
-
       </div>
     </div>
   </section>
 
-  <!-- ===== PROJECTS ===== -->
+  <!-- ===========================
+   PROJECT
+  =========================== -->
+
   <section class="projects section" id="projects">
     <div class="container">
       <div class="section-label reveal">04 / Projects</div>
@@ -307,160 +325,203 @@
             <img src="./Profile Image/E-Commerse front Image.png" alt="E-commerce Websites preview"
               onerror="this.parentElement.classList.add('no-img')" />
             <div class="project-image-placeholder">
-              <i class="fas fa-image"></i>
-              <span>Preview Coming Soon</span>
-            </div>
-          </div>
-          <div class="project-body">
-          <div class="project-header">
-            <i class="fas fa-folder-open"></i>
-            <div class="project-links">
-              <a href="https://github.com/mohammedshafrin/My-Projects/tree/main/E-commerce%20website" target="_blank" class="project-link" aria-label="GitHub Repository">
-                <i class="fab fa-github"></i>
-              </a>
-              <a href="https://mohammedshafrin.github.io/My-Projects/E-commerce%20website/" target="_blank" class="project-link" aria-label="Live Demo">
-                <i class="fas fa-arrow-up-right-from-square"></i>
-              </a>
-            </div>
-          </div>
-          <h3>E-commerce Websites</h3>
-          <p>A full-stack e-commerce application designed to deliver a smooth online shopping experience with dynamic
-            product management, secure authentication, and responsive design.</p>
-          <div class="project-tags">
-            <span>HTML</span><span>CSS</span><span>BOOTSTRAP 5</span>
-          </div>
-          </div>
-        </div>
-
-        <div class="project-card reveal">
-          <div class="project-image">
-            <img src="./Profile Image/FastFood.png" alt="Web Development Practice preview"
-              onerror="this.parentElement.classList.add('no-img')" />
-            <div class="project-image-placeholder">
-              <i class="fas fa-image"></i>
-              <span>Preview Coming Soon</span>
-            </div>
-          </div>
-          <div class="project-body">
-          <div class="project-header">
-            <i class="fas fa-folder-open"></i>
-            <div class="project-links">
-              <a href="https://github.com/mohammedshafrin/Restaurant-Landing-Page" target="_blank" class="project-link" aria-label="GitHub Repository">
-                <i class="fab fa-github"></i>
-              </a>
-              <a href="https://mohammedshafrin.github.io/Restaurant-Landing-Page/" target="_blank" class="project-link" aria-label="Live Demo">
-                <i class="fas fa-arrow-up-right-from-square"></i>
-              </a>
-            </div>
-          </div>
-          <h3>Restaurant Landing Page</h3>
-          <p>These sources provide the HTML, CSS, and JavaScript codebase for an interactive, responsive restaurant website featuring a shopping cart.</p>
-          <div class="project-tags">
-            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>BOOTSTRAP</span><span>JQuary</span>
-          </div>
-          </div>
-        </div>
-
-        <div class="project-card reveal">
-          <div class="project-image">
-            <img src="./Projects/python-projects-preview.jpg" alt="Python Programming Projects preview"
-              onerror="this.parentElement.classList.add('no-img')" />
-            <div class="project-image-placeholder">
-              <i class="fas fa-image"></i>
-              <span>Preview Coming Soon</span>
-            </div>
-          </div>
-          <div class="project-body">
-          <div class="project-header">
-            <i class="fas fa-folder-open"></i>
-            <div class="project-links">
-              <a href="#" target="_blank" class="project-link" aria-label="GitHub Repository">
-                <i class="fab fa-github"></i>
-              </a>
-              <a href="#" target="_blank" class="project-link" aria-label="Live Demo">
-                <i class="fas fa-arrow-up-right-from-square"></i>
-              </a>
-            </div>
-          </div>
-          <h3>Python Programming Projects</h3>
-          <p>Python scripts covering fundamentals, data structures, algorithms and scripting concepts.</p>
-          <div class="project-tags">
-            <span>Python</span>
-          </div>
-          </div>
-        </div>
-        
-        <!--
-        <div class="project-card reveal project-extra hidden-project">
-          <div class="project-image">
-            <img src="./Projects/portfolio-preview.jpg" alt="Personal Portfolio Website preview"
-              onerror="this.parentElement.classList.add('no-img')" />
-            <div class="project-image-placeholder">
-              <i class="fas fa-image"></i>
-              <span>Preview Coming Soon</span>
-            </div>
-          </div>
-          <div class="project-body">
-          <div class="project-header">
-            <i class="fas fa-folder-open"></i>
-            <div class="project-links">
-              <a href="#" target="_blank"
-                class="project-link" aria-label="GitHub Repository">
-                <i class="fab fa-github"></i>
-              </a>
-              <a href="#" target="_blank" class="project-link" aria-label="Live Demo">
-                <i class="fas fa-arrow-up-right-from-square"></i>
-              </a>
-            </div>
-          </div>
-          <h3>Personal Portfolio Website</h3>
-          <p>Responsive portfolio with animations, skills section, and JavaScript contact form validation.</p>
-          <div class="project-tags">
-            <span>HTML</span><span>CSS</span><span>JavaScript</span>
-          </div>
-          </div>
-        </div>
-        -->
-
-        <!-- ═══ ADD MORE PROJECT CARDS HERE — copy the block below.
-             The grid shows exactly 3 cards per row. The first 3 cards
-             above are visible immediately; every card after that should
-             get the class "project-extra hidden-project" so it stays
-             hidden until "More Works" is clicked. Hidden cards reveal in
-             the same 3-column grid, automatically wrapping into new rows
-             below (row 2 = cards 4-6, row 3 = cards 7-9, etc.) — no extra
-             markup or JS changes needed, just add cards in order.
-
-        <div class="project-card reveal project-extra hidden-project">
-          <div class="project-image">
-            <img src="./Projects/your-preview.jpg" alt="Project Name preview"
-              onerror="this.parentElement.classList.add('no-img')" />
-            <div class="project-image-placeholder">
-              <i class="fas fa-image"></i>
-              <span>Preview Coming Soon</span>
+              <i class="fas fa-image"></i><span>Preview Coming Soon</span>
             </div>
           </div>
           <div class="project-body">
             <div class="project-header">
               <i class="fas fa-folder-open"></i>
               <div class="project-links">
-                <a href="YOUR_GITHUB_LINK" target="_blank" class="project-link" aria-label="GitHub Repository">
-                  <i class="fab fa-github"></i>
-                </a>
-                <a href="YOUR_LIVE_DEMO_LINK" target="_blank" class="project-link" aria-label="Live Demo">
-                  <i class="fas fa-arrow-up-right-from-square"></i>
-                </a>
+                <a href="https://github.com/mohammedshafrin/My-Projects/tree/main/E-commerce%20website" target="_blank"
+                  class="project-link" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
+                <a href="https://mohammedshafrin.github.io/My-Projects/E-commerce%20website/" target="_blank"
+                  class="project-link" aria-label="Live Demo"><i class="fas fa-arrow-up-right-from-square"></i></a>
               </div>
             </div>
-            <h3>Project Name</h3>
-            <p>Project description goes here.</p>
+            <h3>E-commerce Websites</h3>
+            <p class="desc-text line-clamp-3">A full-stack e-commerce application designed to deliver a smooth online
+              shopping experience with dynamic product management, secure authentication, and responsive design.</p>
+            <button class="btn-read-more">More</button>
             <div class="project-tags">
-              <span>Tag1</span><span>Tag2</span>
+              <span>HTML</span><span>CSS</span><span>BOOTSTRAP 5</span>
             </div>
           </div>
         </div>
-        ═══ -->
 
+        <div class="project-card reveal">
+          <div class="project-image">
+            <img src="./Profile Image/FastFood.png" alt="Restaurant Landing Page preview"
+              onerror="this.parentElement.classList.add('no-img')" />
+            <div class="project-image-placeholder">
+              <i class="fas fa-image"></i><span>Preview Coming Soon</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <i class="fas fa-folder-open"></i>
+              <div class="project-links">
+                <a href="https://github.com/mohammedshafrin/Restaurant-Landing-Page" target="_blank"
+                  class="project-link" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
+                <a href="https://mohammedshafrin.github.io/Restaurant-Landing-Page/" target="_blank"
+                  class="project-link" aria-label="Live Demo"><i class="fas fa-arrow-up-right-from-square"></i></a>
+              </div>
+            </div>
+            <h3>Restaurant Landing Page</h3>
+            <p class="desc-text line-clamp-3">These sources provide the HTML, CSS, and JavaScript codebase for an
+              interactive, responsive restaurant website featuring a shopping cart with dynamic pricing features.</p>
+            <button class="btn-read-more">More</button>
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>BOOTSTRAP</span>
+            </div>
+          </div>
+        </div>
+
+        <!--
+        <div class="project-card reveal">
+          <div class="project-image">
+            <img src="./Projects/python-projects-preview.jpg" alt="Python Programming Projects preview"
+              onerror="this.parentElement.classList.add('no-img')" />
+            <div class="project-image-placeholder">
+              <i class="fas fa-image"></i><span>Preview Coming Soon</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <i class="fas fa-folder-open"></i>
+              <div class="project-links">
+                <a href="#" target="_blank" class="project-link" aria-label="GitHub Repository"><i
+                    class="fab fa-github"></i></a>
+                <a href="#" target="_blank" class="project-link" aria-label="Live Demo"><i
+                    class="fas fa-arrow-up-right-from-square"></i></a>
+              </div>
+            </div>
+            <h3>Python Programming Projects</h3>
+            <p class="desc-text line-clamp-3">Python scripts covering fundamentals, data structures, algorithms and
+              scripting concepts. Includes automation tools, web scraping routines, and basic data analysis applications
+              demonstrating clean, efficient coding practices.</p>
+            <button class="btn-read-more">More</button>
+            <div class="project-tags">
+              <span>Python</span>
+            </div>
+          </div>
+        </div>
+    
+        <div class="project-card reveal project-extra hidden-project">
+          <div class="project-image">
+            <img src="./Projects/portfolio-preview.jpg" alt="Personal Portfolio Website preview" onerror="this.parentElement.classList.add('no-img')" />
+            <div class="project-image-placeholder">
+              <i class="fas fa-image"></i><span>Preview Coming Soon</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <i class="fas fa-folder-open"></i>
+              <div class="project-links">
+                <a href="#" target="_blank" class="project-link" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank" class="project-link" aria-label="Live Demo"><i class="fas fa-arrow-up-right-from-square"></i></a>
+              </div>
+            </div>
+            <h3>Personal Portfolio Website</h3>
+            <p class="desc-text line-clamp-3">Responsive portfolio with animations, skills section, and JavaScript contact form validation. Displays a full timeline of my educational background, professional experience, and links directly to my certification documentation.</p>
+            <button class="btn-read-more">More</button>
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal project-extra hidden-project">
+          <div class="project-image">
+            <img src="./Projects/weather-app-preview.jpg" alt="Weather App preview" onerror="this.parentElement.classList.add('no-img')" />
+            <div class="project-image-placeholder">
+              <i class="fas fa-image"></i><span>Preview Coming Soon</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <i class="fas fa-folder-open"></i>
+              <div class="project-links">
+                <a href="#" target="_blank" class="project-link" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <h3>API Weather Application</h3>
+            <p class="desc-text line-clamp-3">A real-time weather forecasting application leveraging OpenWeather API. Features dynamic background updates based on current climate conditions, accurate geolocation integration, and detailed 5-day forecasts.</p>
+            <button class="btn-read-more">More</button>
+            <div class="project-tags">
+              <span>JavaScript</span><span>API</span><span>CSS</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal project-extra hidden-project">
+          <div class="project-image">
+            <img src="./Projects/task-manager-preview.jpg" alt="Task Manager preview" onerror="this.parentElement.classList.add('no-img')" />
+            <div class="project-image-placeholder">
+              <i class="fas fa-image"></i><span>Preview Coming Soon</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <i class="fas fa-folder-open"></i>
+              <div class="project-links">
+                <a href="#" target="_blank" class="project-link" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <h3>Task Manager Dashboard</h3>
+            <p class="desc-text line-clamp-3">Comprehensive CRUD application allowing users to track, update, and manage daily tasks. Built with a secure PHP backend and MySQL database, offering user authentication and encrypted data storage.</p>
+            <button class="btn-read-more">More</button>
+            <div class="project-tags">
+              <span>PHP</span><span>MySQL</span><span>AJAX</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal project-extra hidden-project">
+          <div class="project-image">
+            <img src="./Projects/security-audit-preview.jpg" alt="Network Security Audit" onerror="this.parentElement.classList.add('no-img')" />
+            <div class="project-image-placeholder">
+              <i class="fas fa-image"></i><span>Preview Coming Soon</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <i class="fas fa-folder-open"></i>
+              <div class="project-links">
+                <a href="#" target="_blank" class="project-link" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <h3>Network Security Audit Tool</h3>
+            <p class="desc-text line-clamp-3">A custom Python script designed for penetration testing environments. Identifies open ports, detects potential vulnerabilities in local networks, and generates automated security compliance reports.</p>
+            <button class="btn-read-more">More</button>
+            <div class="project-tags">
+              <span>Python</span><span>Security</span><span>Networking</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal project-extra hidden-project">
+          <div class="project-image">
+            <img src="./Projects/blog-platform-preview.jpg" alt="Blog Platform preview" onerror="this.parentElement.classList.add('no-img')" />
+            <div class="project-image-placeholder">
+              <i class="fas fa-image"></i><span>Preview Coming Soon</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <i class="fas fa-folder-open"></i>
+              <div class="project-links">
+                <a href="#" target="_blank" class="project-link" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <h3>Custom WordPress Theme</h3>
+            <p class="desc-text line-clamp-3">Designed and developed a robust, fully optimized WordPress theme from scratch. Focuses on core web vitals, high performance, customizable widgets, and advanced custom fields integration.</p>
+            <button class="btn-read-more">More</button>
+            <div class="project-tags">
+              <span>WordPress</span><span>PHP</span><span>CSS</span>
+            </div>
+          </div>
+        </div>
+        
       </div>
 
       <div class="projects-more-wrap reveal">
@@ -470,19 +531,21 @@
           <i class="fas fa-chevron-down projects-arrow"></i>
         </button>
       </div>
-
-    </div>
+      -->
+      </div>
   </section>
 
-  <!-- ===== CERTIFICATIONS ===== -->
+  <!-- ===========================
+   CERTIFICATE
+  =========================== -->
+
   <section class="certifications section" id="certifications">
     <div class="container">
       <div class="section-label reveal">05 / Certifications</div>
       <h2 class="section-title reveal">My <em>credentials</em></h2>
-      <p class="cert-intro reveal">18+ certifications earned across cybersecurity, development, and AI — from globally
+      <p class="cert-intro reveal">Certifications earned across cybersecurity, development, and AI — from globally
         recognized institutions.</p>
 
-      <!-- Filter Tabs -->
       <div class="cert-filters reveal">
         <button class="cert-filter active" data-filter="all">All</button>
         <button class="cert-filter" data-filter="security">Security</button>
@@ -491,7 +554,6 @@
         <button class="cert-filter" data-filter="networking">Networking</button>
       </div>
 
-      <!-- Carousel Wrapper -->
       <div class="cert-carousel-wrapper reveal">
         <button class="cert-nav-btn cert-prev" id="certPrev" aria-label="Previous certifications">
           <i class="fas fa-chevron-left"></i>
@@ -500,232 +562,337 @@
         <div class="cert-carousel-viewport" id="certViewport">
           <div class="cert-carousel-track" id="certTrack">
 
-            <!-- CARD 1 -->
+            <!-- Front-End Web Development -->
             <div class="cert-card" data-category="dev">
               <div class="cert-img-wrap">
-                <img src="./Education/Front-End Web Development.png" alt="Front-End Web Development" class="cert-img"
+                <img src="./Education/Front-End Web Development.png" alt="Web Development Certificate" class="cert-img"
                   onerror="this.parentElement.classList.add('no-img')" />
                 <div class="cert-img-placeholder">
-                  <i class="fas fa-certificate"></i>
-                  <span>Univ. of Moratuwa</span>
+                  <i class="fas fa-certificate"></i><span>Univ. of Moratuwa</span>
                 </div>
               </div>
               <div class="cert-body">
                 <div class="cert-issuer">
-                  <i class="fas fa-building"></i>
-                  Univ. of Moratuwa
+                  <i class="fas fa-university"></i> University of Moratuwa
                 </div>
                 <h3 class="cert-title">Front-End Web Development</h3>
-                <p class="cert-desc">Designing and developing responsive, user-centric web applications using modern
-                  HTML, CSS, and JavaScript, ensuring cross-browser compatibility and optimal performance.</p>
+                <p class="desc-text cert-desc line-clamp-3">Core web design and development skills including HTML5,
+                  CSS3, responsive layouts, JavaScript fundamentals, CSS frameworks, and semantic web structure for
+                  accessibility.</p>
+                <button class="btn-read-more">More</button>
                 <div class="cert-meta">
-                  <span class="cert-date"><i class="fas fa-calendar-alt"></i> 2023</span>
+                  <span class="cert-date"><i class="fas fa-calendar-alt"></i> 2026</span>
                   <span class="cert-badge dev">Development</span>
                 </div>
-                <a href="#" class="cert-view-btn" target="_blank">
-                  <i class="fas fa-external-link-alt"></i> View Certificate
-                </a>
+                <a href="https://prnt.sc/AV8KCFd-84m-" class="cert-view-btn" target="_blank"><i
+                    class="fas fa-external-link-alt"></i> View Certificate</a>
               </div>
             </div>
-
-            <!-- CARD 2 -->
+            <!-- Networking Essentials -->
             <div class="cert-card" data-category="networking">
               <div class="cert-img-wrap">
                 <img src="./Education/Professional Networking for Career Growth.png" alt="Cisco Certificate"
                   class="cert-img" onerror="this.parentElement.classList.add('no-img')" />
                 <div class="cert-img-placeholder">
-                  <i class="fas fa-certificate"></i>
-                  <span>HP Life | HP Fundation</span>
+                  <i class="fas fa-certificate"></i><span>HP Life | HP Fundation</span>
                 </div>
               </div>
               <div class="cert-body">
                 <div class="cert-issuer">
-                  <i class="fas fa-building"></i>
-                  HP Life | HP Fundation
+                  <i class="fas fa-building"></i> HP Life | HP Fundation
                 </div>
                 <h3 class="cert-title">Networking Essentials</h3>
-                <p class="cert-desc">Foundational networking concepts including protocols, IP addressing, routing,
-                  switching and network troubleshooting skills.</p>
+                <p class="desc-text cert-desc line-clamp-3">Foundational networking concepts including protocols, IP
+                  addressing, routing, switching and network troubleshooting skills, enabling robust configurations for
+                  enterprise-level local area networks.</p>
+                <button class="btn-read-more">More</button>
                 <div class="cert-meta">
                   <span class="cert-date"><i class="fas fa-calendar-alt"></i> 2026</span>
                   <span class="cert-badge networking">Networking</span>
                 </div>
-                <a href="https://drive.google.com/file/d/1Q-otMnNDZcc70YQkDtoH1uD_XnFDBoxh/view?usp=sharing"
-                  class="cert-view-btn" target="_blank">
-                  <i class="fas fa-external-link-alt"></i> View Certificate
-                </a>
+                <a href="https://prnt.sc/uC9lX4S4DKvc" class="cert-view-btn" target="_blank"><i
+                    class="fas fa-external-link-alt"></i> View Certificate</a>
               </div>
             </div>
-
-            <!-- CARD 3 -->
+            <!-- Data Science & Analytics -->
             <div class="cert-card" data-category="ana">
               <div class="cert-img-wrap">
                 <img src="./Education/Data Science & Analytics.png" alt="Data Science & Analytics" class="cert-img"
                   onerror="this.parentElement.classList.add('no-img')" />
                 <div class="cert-img-placeholder">
-                  <i class="fas fa-certificate"></i>
-                  <span>HP Life | HP Fundation</span>
+                  <i class="fas fa-certificate"></i><span>HP Life | HP Fundation</span>
                 </div>
               </div>
               <div class="cert-body">
                 <div class="cert-issuer">
-                  <i class="fas fa-building"></i>
-                  HP Life | HP Fundation
+                  <i class="fas fa-building"></i> HP Life | HP Fundation
                 </div>
                 <h3 class="cert-title">Data Science & Analytics</h3>
-                <p class="cert-desc">Hands-on training in machine learning algorithms, deep learning, neural networks
-                  and real-world AI applications using Python.</p>
+                <p class="desc-text cert-desc line-clamp-3">Hands-on training in machine learning algorithms, deep
+                  learning, neural networks, predictive modeling, data visualization techniques, and real-world AI
+                  applications using advanced Python libraries.</p>
+                <button class="btn-read-more">More</button>
                 <div class="cert-meta">
                   <span class="cert-date"><i class="fas fa-calendar-alt"></i> 2026</span>
                   <span class="cert-badge ana">Analytics</span>
                 </div>
-                <a href="https://drive.google.com/file/d/1890iszqbR-Kk0K7EgVSJB-rSdq86CKN8/view?usp=sharing"
-                  class="cert-view-btn" target="_blank">
-                  <i class="fas fa-external-link-alt"></i> View Certificate
-                </a>
+                <a href="https://prnt.sc/zFgyfdxymPoA" class="cert-view-btn" target="_blank"><i
+                    class="fas fa-external-link-alt"></i> View Certificate</a>
               </div>
             </div>
-
-            <!-- CARD 4 -->
+            <!-- Web Design for Beginners -->
             <div class="cert-card" data-category="dev">
               <div class="cert-img-wrap">
                 <img src="./Education/Web Design for Beginners.png" alt="Web Development Certificate" class="cert-img"
                   onerror="this.parentElement.classList.add('no-img')" />
                 <div class="cert-img-placeholder">
-                  <i class="fas fa-certificate"></i>
-                  <span>Univ. of Moratuwa</span>
+                  <i class="fas fa-certificate"></i><span>Univ. of Moratuwa</span>
                 </div>
               </div>
               <div class="cert-body">
                 <div class="cert-issuer">
-                  <i class="fas fa-university"></i>
-                  University of Moratuwa
+                  <i class="fas fa-university"></i> University of Moratuwa
                 </div>
                 <h3 class="cert-title">Web Design for Beginners</h3>
-                <p class="cert-desc">Core web design and development skills including HTML5, CSS3, responsive layouts
-                  and JavaScript fundamentals.</p>
+                <p class="desc-text cert-desc line-clamp-3">Core web design and development skills including HTML5,
+                  CSS3, responsive layouts, JavaScript fundamentals, CSS frameworks, and semantic web structure for
+                  accessibility.</p>
+                <button class="btn-read-more">More</button>
                 <div class="cert-meta">
                   <span class="cert-date"><i class="fas fa-calendar-alt"></i> 2026</span>
                   <span class="cert-badge dev">Development</span>
                 </div>
-                <a href="https://drive.google.com/file/d/15z6cT5FSo6L5xFQY-bx6zyVucdcY_9Vh/view?usp=sharing"
-                  class="cert-view-btn" target="_blank">
-                  <i class="fas fa-external-link-alt"></i> View Certificate
-                </a>
+                <a href="https://prnt.sc/8gFY4YtcIa2_" class="cert-view-btn" target="_blank"><i
+                    class="fas fa-external-link-alt"></i> View Certificate</a>
               </div>
             </div>
-
-            <!-- CARD 5 -->
-            <div class="cert-card" data-category="security">
-              <div class="cert-img-wrap">
-                <img src="certs/cybersecurity-marstech.jpg" alt="CyberSecurity Certificate" class="cert-img"
-                  onerror="this.parentElement.classList.add('no-img')" />
-                <div class="cert-img-placeholder">
-                  <i class="fas fa-certificate"></i>
-                  <span>MARS TECH</span>
-                </div>
-              </div>
-              <div class="cert-body">
-                <div class="cert-issuer">
-                  <i class="fas fa-building"></i>
-                  MARS TECH International
-                </div>
-                <h3 class="cert-title">CyberSecurity Professional</h3>
-                <p class="cert-desc">Advanced cybersecurity training covering threat modeling, penetration testing,
-                  incident response and security architecture.</p>
-                <div class="cert-meta">
-                  <span class="cert-date"><i class="fas fa-calendar-alt"></i> 2023</span>
-                  <span class="cert-badge security">Security</span>
-                </div>
-                <a href="#" class="cert-view-btn" target="_blank">
-                  <i class="fas fa-external-link-alt"></i> View Certificate
-                </a>
-              </div>
-            </div>
-
-            <!-- CARD 6 -->
+            <!-- Pythone for Beginners -->
             <div class="cert-card" data-category="dev">
               <div class="cert-img-wrap">
-                <img src="./Education/Python.png" alt="Python Certificate" class="cert-img"
+                <img src="./Education/Pythone for Beginners.png" alt="Pythone for Beginners" class="cert-img"
                   onerror="this.parentElement.classList.add('no-img')" />
                 <div class="cert-img-placeholder">
-                  <i class="fas fa-certificate"></i>
-                  <span>Python</span>
+                  <i class="fas fa-certificate"></i><span>Univ. of Moratuwa</span>
                 </div>
               </div>
               <div class="cert-body">
                 <div class="cert-issuer">
-                  <i class="fas fa-building"></i>
-                  University of Moratuwa
+                  <i class="fas fa-university"></i> University of Moratuwa
                 </div>
-                <h3 class="cert-title">Python for Beginners</h3>
-                <p class="cert-desc">Python programming fundamentals including data types, control flow, functions, OOP
-                  concepts and file handling.</p>
+                <h3 class="cert-title">Pythone for Beginners</h3>
+                <p class="desc-text cert-desc line-clamp-3">Python programming fundamentals including data types,
+                  control flow, functions, OOP concepts and file handling.</p>
+                <button class="btn-read-more">More</button>
                 <div class="cert-meta">
                   <span class="cert-date"><i class="fas fa-calendar-alt"></i> 2026</span>
                   <span class="cert-badge dev">Development</span>
                 </div>
-                <a href="https://drive.google.com/file/d/1L7zsOYY_hmcHLDSWZEchLx5oEhEP0QLi/view?usp=sharing"
-                  class="cert-view-btn" target="_blank">
-                  <i class="fas fa-external-link-alt"></i> View Certificate
-                </a>
+                <a href="https://prnt.sc/CF--Q8TegY-v" class="cert-view-btn" target="_blank"><i
+                    class="fas fa-external-link-alt"></i> View Certificate</a>
               </div>
             </div>
-
-            <!-- ═══ ADD MORE CERT CARDS HERE — copy the block below.
-                 The carousel JS automatically re-detects new .cert-card elements,
-                 recalculates pages/dots, and applies filtering by data-category.
-
-            <div class="cert-card" data-category="dev">
-              <div class="cert-img-wrap">
-                <img src="./Education/your-cert.png" alt="Certificate Name" class="cert-img"
-                  onerror="this.parentElement.classList.add('no-img')" />
-                <div class="cert-img-placeholder">
-                  <i class="fas fa-certificate"></i>
-                  <span>Issuer Name</span>
-                </div>
-              </div>
-              <div class="cert-body">
-                <div class="cert-issuer">
-                  <i class="fas fa-building"></i>
-                  Issuer Name
-                </div>
-                <h3 class="cert-title">Certificate Title</h3>
-                <p class="cert-desc">Certificate description goes here.</p>
-                <div class="cert-meta">
-                  <span class="cert-date"><i class="fas fa-calendar-alt"></i> 2026</span>
-                  <span class="cert-badge dev">Development</span>
-                </div>
-                <a href="YOUR_CERT_LINK" class="cert-view-btn" target="_blank">
-                  <i class="fas fa-external-link-alt"></i> View Certificate
-                </a>
-              </div>
-            </div>
-            ═══ -->
 
           </div>
         </div>
-
         <button class="cert-nav-btn cert-next" id="certNext" aria-label="Next certifications">
           <i class="fas fa-chevron-right"></i>
         </button>
       </div>
-
-      <!-- Carousel Dots -->
       <div class="cert-dots" id="certDots"></div>
-
     </div>
   </section>
 
-  <!-- ===== GAMES ===== -->
+  <!-- ===========================
+   EXPERIENCE
+  =========================== -->
+
+  <section class="experience section" id="experience">
+    <div class="container">
+      <div class="section-label reveal">06 / Experience</div>
+      <h2 class="section-title reveal">Working <em>Experience</em></h2>
+      <p class="experience-intro reveal">Click the arrows or the cards to explore my professional journey,
+        collaborations, and key milestones in development and security.</p>
+
+      <div class="exp-carousel-wrapper reveal">
+        <div class="exp-carousel-container">
+          <div class="exp-slider" id="expSlider">
+
+            <!-- 01.DATACOM -->
+            <div class="exp-card active">
+              <h3>Software Development</h3>
+              <p class="exp-company">DATACOM</p>
+              <p class="exp-details">
+                Title: Software Development Job Simulation
+                <br>
+                Issuer: Datacom & Forage
+                <br>
+                Date: July 2026
+                <br><br>
+                Completed practical tasks in software review, root cause analysis, and bug fixing during an intensive
+                job simulation by Datacom.
+              </p>
+              <a href="https://prnt.sc/5g-Ygbb4CI0u" class="btn btn-outline btn-cert">View Certificate</a>
+            </div>
+
+            <!-- 02.HPE -->
+            <div class="exp-card">
+              <h3>Software Engineering</h3>
+              <p class="exp-company">HPE</p>
+              <p class="exp-details">
+                Title: Software Engineering Job Simulation
+                <br>
+                Issuer: HPE & Forage
+                <br>
+                Date: July 2026
+                <br><br>
+                Completed practical tasks involving the proposal and development of a RESTful Web
+                Service, implementing data upload capabilities, and creating comprehensive unit tests during an
+                intensive HPE job simulation.
+              </p>
+              <a href="https://prnt.sc/gqITuJi9CKn7" class="btn btn-outline btn-cert">View Certificate</a>
+            </div>
+
+            <!-- 03.JPMorgan Chase & Co. -->
+            <div class="exp-card">
+              <h3>Software Engineering</h3>
+              <p class="exp-company">JPMorgan Chase & Co.</p>
+              <p class="exp-details">
+                Title: Software Engineering Job Simulation
+                <br>
+                Issuer: JPMorgan Chase & Co. & Forage
+                <br>
+                Date: July 2026
+                <br><br>
+                Completed practical tasks in project setup, integrating Kafka and H2 databases, and
+                developing REST API controllers during an intensive job simulation by JPMorgan Chase & Co.
+              </p>
+              <a href="https://prnt.sc/ZyQv5zQsE-hU" class="btn btn-outline btn-cert">View Certificate</a>
+            </div>
+
+            <!-- 04.Skyscanner -->
+            <div class="exp-card">
+              <h3>Front-End Software Engineering</h3>
+              <p class="exp-company">Skyscanner</p>
+              <p class="exp-details">
+                Title: Front-End Software Engineering Job Simulation
+                <br>
+                Issuer: Skyscanner & Forage
+                <br>
+                Date: July 2026
+                <br><br>
+                Completed practical tasks in front-end development, specifically focusing on building
+                a Backpack React Web App during an intensive Skyscanner job simulation.
+              </p>
+              <a href="https://prnt.sc/OcUPpqs4JvCJ" class="btn btn-outline btn-cert">View Certificate</a>
+            </div>
+
+            <!-- 05.Commonwealth Bank -->
+            <div class="exp-card">
+              <h3>Software Engineering</h3>
+              <p class="exp-company">Commonwealth Bank</p>
+              <p class="exp-details">
+                Title: Software Engineering Job Simulation
+                <br>
+                Issuer: Commonwealth Bank & Forage
+                <br>
+                Date: July 2026
+                <br><br>
+                Completed practical tasks including modifying an existing .NET backend and
+                React/Redux frontend, handling client requests, writing test coverage, and managing pull requests during
+                an intensive Commonwealth Bank job simulation.
+              </p>
+              <a href="https://prnt.sc/-hHgA6L8KIzM" class="btn btn-outline btn-cert">View Certificate</a>
+            </div>
+
+            <!-- 06.Walmart Global Tech -->
+            <div class="exp-card">
+              <h3>Advanced Software Engineering</h3>
+              <p class="exp-company">Walmart Global Tech</p>
+              <p class="exp-details">
+                Title: Advanced Software Engineering Job Simulation
+                <br>
+                Issuer: Walmart Global Tech & Forage
+                <br>
+                Date: July 2026
+                <br><br>
+                Completed practical tasks in advanced data structures, software architecture,
+                relational database design, and data munging during an intensive Walmart Global Tech job simulation.
+              </p>
+              <a href="https://prnt.sc/15iSBOxluiAy" class="btn btn-outline btn-cert">View Certificate</a>
+            </div>
+
+            <!--
+            <div class="exp-card">
+              <i class="fas fa-bug exp-icon"></i>
+              <h3>QA Tester</h3>
+              <p class="exp-company">AppFlow Studio • 2022</p>
+              <p class="exp-details">Performed manual and automated testing for web applications, reporting tracking
+                bugs via Jira and collaborating with developers.</p>
+              <a href="#certificate-link-6" class="btn btn-outline btn-cert">View Certificate</a>
+            </div>
+
+            <div class="exp-card">
+              <i class="fas fa-bug exp-icon"></i>
+              <h3>QA Tester</h3>
+              <p class="exp-company">AppFlow Studio • 2022</p>
+              <p class="exp-details">Performed manual and automated testing for web applications, reporting tracking
+                bugs via Jira and collaborating with developers.</p>
+              <a href="#certificate-link-6" class="btn btn-outline btn-cert">View Certificate</a>
+            </div>
+
+            <div class="exp-card">
+              <i class="fas fa-bug exp-icon"></i>
+              <h3>QA Tester</h3>
+              <p class="exp-company">AppFlow Studio • 2022</p>
+              <p class="exp-details">Performed manual and automated testing for web applications, reporting tracking
+                bugs via Jira and collaborating with developers.</p>
+              <a href="#certificate-link-6" class="btn btn-outline btn-cert">View Certificate</a>
+            </div>
+
+            <div class="exp-card">
+              <i class="fas fa-bug exp-icon"></i>
+              <h3>QA Tester</h3>
+              <p class="exp-company">AppFlow Studio • 2022</p>
+              <p class="exp-details">Performed manual and automated testing for web applications, reporting tracking
+                bugs via Jira and collaborating with developers.</p>
+              <a href="#certificate-link-6" class="btn btn-outline btn-cert">View Certificate</a>
+            </div>
+
+            <div class="exp-card">
+              <i class="fas fa-bug exp-icon"></i>
+              <h3>QA Tester</h3>
+              <p class="exp-company">AppFlow Studio • 2022</p>
+              <p class="exp-details">Performed manual and automated testing for web applications, reporting tracking
+                bugs via Jira and collaborating with developers.</p>
+              <a href="#certificate-link-6" class="btn btn-outline btn-cert">View Certificate</a>
+            </div>
+            -->
+          </div>
+        </div>
+
+        <div class="exp-nav-controls">
+          <button class="exp-nav-btn" id="expPrev" aria-label="Previous experience">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="exp-nav-btn" id="expNext" aria-label="Next experience">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================
+   GAME
+  =========================== -->
+
   <section class="games section" id="games">
     <div class="container">
-      <div class="section-label reveal">06 / Games</div>
-      <h2 class="section-title reveal">Games I've <em>played</em></h2>
-      <p class="games-intro reveal">A collection of gameplay highlights and walkthroughs from titles I enjoy —
-        showcasing strategy, skill, and style.</p>
+      <div class="section-label reveal">07 / Games</div>
+      <h2 class="section-title reveal">Games I've <em>played & built</em></h2>
+      <p class="games-intro reveal">A collection of gameplay highlights and interactive projects — showcasing strategy,
+        skill, and programming logic.</p>
 
-      <!-- Games Carousel Wrapper -->
       <div class="games-carousel-wrapper reveal">
         <button class="games-nav-btn games-prev" id="gamesPrev" aria-label="Previous games">
           <i class="fas fa-chevron-left"></i>
@@ -733,11 +900,8 @@
 
         <div class="games-carousel-viewport" id="gamesViewport">
           <div class="games-carousel-track" id="gamesTrack">
-
-            <!-- GAME CARD 1 -->
             <div class="game-card">
               <div class="game-video-wrap">
-                <!-- Local video file -->
                 <video controls preload="metadata">
                   <source src="./Videos/Dice Game.mp4" type="video/mp4">
                   Your browser does not support the video tag.
@@ -747,131 +911,39 @@
                 <div class="game-header">
                   <i class="fas fa-gamepad"></i>
                   <div class="game-links">
-                    <a href="https://github.com/mohammedshafrin/The-Dice-Game" target="_blank" class="game-link" aria-label="GitHub Repository">
-                      <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://mohammedshafrin.github.io/The-Dice-Game/" target="_blank" class="game-link" aria-label="Live Demo">
-                      <i class="fas fa-arrow-up-right-from-square"></i>
-                    </a>
+                    <a href="https://github.com/mohammedshafrin/The-Dice-Game" target="_blank" class="game-link"
+                      aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
+                    <a href="https://mohammedshafrin.github.io/The-Dice-Game/" target="_blank" class="game-link"
+                      aria-label="Live Demo"><i class="fas fa-arrow-up-right-from-square"></i></a>
                   </div>
                 </div>
-                <h3 class="game-title">The Dice game</h3>
-                <p class="game-desc">A fun web application featuring random dice generation, automatic winner detection, and a responsive design for an engaging user experience.</p>
+                <h3 class="game-title">The Dice Game</h3>
+                <p class="game-desc">A fun web application featuring random dice generation, automatic winner detection,
+                  and a responsive design for an engaging user experience.</p>
               </div>
             </div>
 
-            <!-- GAME CARD 2 -->
             <div class="game-card">
               <div class="game-video-wrap">
                 <iframe src="./Videos/The Siman Game.mp4" title="Game Video 2" frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen>
-                </iframe>
+                  allowfullscreen></iframe>
               </div>
               <div class="game-info">
                 <div class="game-header">
                   <i class="fas fa-gamepad"></i>
                   <div class="game-links">
-                    <a href="https://github.com/mohammedshafrin/The-Simon-Game" target="_blank" class="game-link" aria-label="GitHub Repository">
-                      <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://mohammedshafrin.github.io/The-Simon-Game/" target="_blank" class="game-link" aria-label="Live Demo">
-                      <i class="fas fa-arrow-up-right-from-square"></i>
-                    </a>
+                    <a href="https://github.com/mohammedshafrin/The-Simon-Game" target="_blank" class="game-link"
+                      aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
+                    <a href="https://mohammedshafrin.github.io/The-Simon-Game/" target="_blank" class="game-link"
+                      aria-label="Live Demo"><i class="fas fa-arrow-up-right-from-square"></i></a>
                   </div>
                 </div>
                 <h3 class="game-title">The Simon Game</h3>
-                <p class="game-desc">Simon Game is a memory game where players must repeat an increasingly long sequence of colors. Each level adds a new color to the pattern, 
-                  challenging the player's memory and concentration.</p>
+                <p class="game-desc">Simon Game is a memory game where players must repeat an increasingly long sequence
+                  of colors. Each level challenges memory and concentration.</p>
               </div>
             </div>
-            
-            <!-- GAME CARD 3 -->
-             <!--
-            <div class="game-card">
-              <div class="game-video-wrap">
-                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Game Video 3" frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen>
-                </iframe>
-              </div>
-              <div class="game-info">
-                <div class="game-header">
-                  <i class="fas fa-gamepad"></i>
-                  <div class="game-links">
-                    <a href="#" target="_blank" class="game-link" aria-label="GitHub Repository">
-                      <i class="fab fa-github"></i>
-                    </a>
-                    <a href="#" target="_blank" class="game-link" aria-label="Live Demo">
-                      <i class="fas fa-arrow-up-right-from-square"></i>
-                    </a>
-                  </div>
-                </div>
-                <h3 class="game-title">Game Title Three</h3>
-                <p class="game-desc">Open-world exploration highlight reel showcasing hidden areas, rare collectibles,
-                  and stunning in-game cinematics.</p>
-              </div>
-            </div>
-            -->
-
-            <!-- GAME CARD 4 -->
-            <!--
-            <div class="game-card">
-              <div class="game-video-wrap">
-                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Game Video 4" frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen>
-                </iframe>
-              </div>
-              <div class="game-info">
-                <div class="game-header">
-                  <i class="fas fa-gamepad"></i>
-                  <div class="game-links">
-                    <a href="#" target="_blank" class="game-link" aria-label="GitHub Repository">
-                      <i class="fab fa-github"></i>
-                    </a>
-                    <a href="#" target="_blank" class="game-link" aria-label="Live Demo">
-                      <i class="fas fa-arrow-up-right-from-square"></i>
-                    </a>
-                  </div>
-                </div>
-                <h3 class="game-title">Game Title Four</h3>
-                <p class="game-desc">Speedrun attempt breaking the previous personal best time with optimised routing
-                  and precision movement mechanics.</p>
-              </div>
-            </div>
-            -->
-
-
-            <!-- ═══ ADD MORE GAME CARDS HERE — copy the block below.
-                 The carousel JS automatically re-detects new .game-card elements
-                 and recalculates pages/dots.
-
-            <div class="game-card">
-              <div class="game-video-wrap">
-                <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Game Video" frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen>
-                </iframe>
-              </div>
-              <div class="game-info">
-                <div class="game-header">
-                  <i class="fas fa-gamepad"></i>
-                  <div class="game-links">
-                    <a href="YOUR_GITHUB_LINK" target="_blank" class="game-link" aria-label="GitHub Repository">
-                      <i class="fab fa-github"></i>
-                    </a>
-                    <a href="YOUR_LIVE_DEMO_LINK" target="_blank" class="game-link" aria-label="Live Demo">
-                      <i class="fas fa-arrow-up-right-from-square"></i>
-                    </a>
-                  </div>
-                </div>
-                <h3 class="game-title">Game Title</h3>
-                <p class="game-desc">Game description goes here.</p>
-              </div>
-            </div>
-            ═══ -->
-
           </div>
         </div>
 
@@ -879,21 +951,16 @@
           <i class="fas fa-chevron-right"></i>
         </button>
       </div>
-
-      <!-- Dots -->
       <div class="games-dots" id="gamesDots"></div>
-
     </div>
   </section>
 
-  <!-- ===== CONTACT ===== -->
   <section class="contact section" id="contact">
     <div class="container">
-      <div class="section-label reveal">07 / Contact</div>
+      <div class="section-label reveal">08 / Contact</div>
       <h2 class="section-title reveal">Let's <em>talk</em></h2>
 
       <div class="contact-grid">
-
         <div class="contact-info reveal">
           <p class="contact-intro">Have a project in mind or want to collaborate? Feel free to reach out — I'm always
             open to new opportunities.</p>
@@ -905,7 +972,6 @@
               <a href="mailto:mohammedshafrin.it@gmail.com" class="contact-val">mohammedshafrin.it@gmail.com</a>
             </div>
           </div>
-
           <div class="contact-item">
             <div class="contact-icon"><i class="fas fa-phone"></i></div>
             <div>
@@ -913,7 +979,6 @@
               <span class="contact-val">+94 778 808 895</span>
             </div>
           </div>
-
           <div class="contact-item">
             <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
             <div>
@@ -952,32 +1017,31 @@
           </button>
           <div class="form-feedback" id="formFeedback"></div>
         </form>
-
       </div>
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- ===========================
+   FOOTER
+  =========================== -->
+
   <footer class="footer" id="footer">
     <div class="footer-top">
       <div class="container footer-top-inner">
 
-        <!-- Col 1: Brand -->
         <div class="footer-col footer-brand">
           <div class="footer-logo">Mohammed Shafrin<span class="accent">.</span></div>
-          <p class="footer-tagline">
-            Junior Full Stack Developer & cybersecurity professional, based in Kandy , Sri Lanka.
+          <p class="footer-tagline">Junior Full Stack Developer & cybersecurity professional, based in Kandy, Sri Lanka.
           </p>
           <div class="footer-socials">
             <a href="https://www.linkedin.com/in/mohammedshafrin/" target="_blank" aria-label="LinkedIn"><i
                 class="fab fa-linkedin-in"></i></a>
             <a href="https://github.com/mohammedshafrin" target="_blank" aria-label="GitHub"><i
                 class="fab fa-github"></i></a>
-            <a href="mohammedshafrin.it@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <a href="mailto:mohammedshafrin.it@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
           </div>
         </div>
 
-        <!-- Col 2: Quick Links -->
         <div class="footer-col">
           <h4 class="footer-heading">Quick Links</h4>
           <ul class="footer-links">
@@ -987,12 +1051,11 @@
             <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
             <li><a href="#projects"><i class="fas fa-chevron-right"></i> Projects</a></li>
             <li><a href="#certifications"><i class="fas fa-chevron-right"></i> Certifications</a></li>
+            <li><a href="#experience"><i class="fas fa-chevron-right"></i> Experience</a></li>
             <li><a href="#games"><i class="fas fa-chevron-right"></i> Games</a></li>
-            <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
           </ul>
         </div>
 
-        <!-- Col 3: About Me (short) -->
         <div class="footer-col">
           <h4 class="footer-heading">About Me</h4>
           <p class="footer-about-text">
@@ -1002,32 +1065,21 @@
           <a href="#about" class="footer-read-more">Read More <i class="fas fa-arrow-right"></i></a>
         </div>
 
-        <!-- Col 4: Contact -->
         <div class="footer-col">
           <h4 class="footer-heading">Contact Us</h4>
           <ul class="footer-contact-list">
-            <li>
-              <i class="fas fa-envelope"></i>
-              <a href="mailto:mohammedshafrin.it@gmail.com">mohammedshafrin.it@gmail.com</a>
-            </li>
-            <li>
-              <i class="fas fa-phone"></i>
-              <span>+94 778 808 895</span>
-            </li>
-            <li>
-              <i class="fas fa-map-marker-alt"></i>
-              <span>Kandy , Sri Lanka</span>
-            </li>
+            <li><i class="fas fa-envelope"></i><a
+                href="mailto:mohammedshafrin.it@gmail.com">mohammedshafrin.it@gmail.com</a></li>
+            <li><i class="fas fa-phone"></i><span>+94 778 808 895</span></li>
+            <li><i class="fas fa-map-marker-alt"></i><span>Kandy , Sri Lanka</span></li>
           </ul>
           <a href="#contact" class="btn btn-primary footer-cta">
             <i class="fas fa-paper-plane"></i> Send Message
           </a>
         </div>
-
       </div>
     </div>
 
-    <!-- Footer Bottom -->
     <div class="footer-bottom">
       <div class="container footer-bottom-inner">
         <span class="footer-copy">© 2026 Mohammed Shafrin. All rights reserved.</span>
@@ -1036,7 +1088,7 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="./script.js"></script>
 </body>
 
 </html>
