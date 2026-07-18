@@ -2057,6 +2057,175 @@ a.contact-val:hover {
   }
 }
 
+/* ===========================
+   ACHIEVEMENTS
+=========================== */
+.achievements {
+  position: relative;
+}
+
+.achievements .section-title {
+  margin-bottom: 18px;
+}
+
+.achv-underline {
+  width: 90px;
+  height: 4px;
+  border-radius: 4px;
+  margin-bottom: 56px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+}
+
+.achv-card {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 40px;
+  align-items: center;
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 32px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+
+.achv-card:hover {
+  border-color: var(--accent);
+}
+
+.achv-badge-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.achv-hex {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+  background: linear-gradient(160deg, var(--bg3), var(--surface2));
+  border: 2px solid transparent;
+  background-image:
+    linear-gradient(160deg, var(--bg3), var(--surface2)),
+    linear-gradient(135deg, var(--accent), var(--accent2));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.achv-hex-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+}
+
+.achv-hex-placeholder {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: var(--accent);
+  font-family: var(--font-display);
+}
+
+.achv-hex.no-img .achv-hex-img {
+  display: none;
+}
+
+.achv-hex.no-img .achv-hex-placeholder {
+  display: flex;
+}
+
+.achv-hex-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+.achv-hex-stars {
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+}
+
+.achv-rating {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.achv-stars {
+  color: var(--accent);
+  font-size: 0.95rem;
+  letter-spacing: 3px;
+}
+
+.achv-score {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.achv-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.achv-desc {
+  color: var(--text-muted);
+  line-height: 1.7;
+  font-size: 0.88rem;
+  margin-bottom: 20px;
+  max-width: 640px;
+}
+
+.achv-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.achv-tag {
+  padding: 6px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: var(--accent-dim);
+}
+
+.achv-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 30px;
+  border-radius: var(--radius);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: #000;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.achv-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px var(--accent-glow);
+}
+
 @media (max-width: 768px) {
   :root {
     --nav-h: 64px;
@@ -2181,6 +2350,26 @@ a.contact-val:hover {
 
   .section-title {
     margin-bottom: 40px;
+  }
+
+  .achv-card {
+    grid-template-columns: 1fr;
+    padding: 32px 24px;
+    text-align: center;
+  }
+
+  .achv-badge-wrap {
+    margin-bottom: 8px;
+  }
+
+  .achv-hex {
+    width: 140px;
+    height: 140px;
+  }
+
+  .achv-rating,
+  .achv-tags {
+    justify-content: center;
   }
 
   .cert-filters {
