@@ -1,6 +1,7 @@
 /* ===========================
-   MOHAMMED SHAFRIN PORTFOLIO JS (Updated)
+   SAHRAN HAMEED PORTFOLIO JS (Updated)
 =========================== */
+
 // ── Custom Cursor ──
 const cursor = document.getElementById('cursor');
 const cursorDot = document.getElementById('cursorDot');
